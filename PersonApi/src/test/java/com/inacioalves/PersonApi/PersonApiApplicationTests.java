@@ -1,10 +1,10 @@
-package com.inacioalves.personmanagementApi;
+package com.inacioalves.PersonApi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PersonmanagementApiApplicationTests {
+class PersonApiApplicationTests {
 
 	@Test
 	void contextLoads() {
