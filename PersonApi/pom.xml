@@ -8,11 +8,11 @@
 		<version>2.2.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>one.digitalinnovation</groupId>
+	<groupId>com.inacioalves</groupId>
 	<artifactId>personapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>personapi</name>
-	<description>Person API project created for DIO</description>
+	<description>Person API project created for InacioAlves</description>
 
 	<properties>
 		<java.version>11</java.version>
