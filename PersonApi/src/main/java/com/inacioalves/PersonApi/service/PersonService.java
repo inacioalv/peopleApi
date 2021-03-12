@@ -13,18 +13,19 @@ import com.inacioalves.PersonApi.exeption.PersonNotFoundExeption;
 import com.inacioalves.PersonApi.mapper.PersonMaper;
 import com.inacioalves.PersonApi.repository.PersonRepository;
 
+import lombok.AllArgsConstructor;
+
+
 
 @Service
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonService {
 	
 	private PersonRepository personrepository;
 	
 	private final PersonMaper personMapper = PersonMaper.INSTANCE;
 
-	@Autowired
-	public PersonService(PersonRepository personrepository) {
-		this.personrepository = personrepository;
-	}
+	
 	
 	 public MessageResponseDto createPerson(PersonDto personDto) {
 	        Person personToSave = personMapper.toMdel(personDto);

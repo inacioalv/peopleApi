@@ -21,17 +21,17 @@ import com.inacioalves.PersonApi.dto.PersonDto;
 import com.inacioalves.PersonApi.exeption.PersonNotFoundExeption;
 import com.inacioalves.PersonApi.service.PersonService;
 
+import lombok.AllArgsConstructor;
+
 @RestController
 @RequestMapping("/api/v1/people")
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonController {
 
 	
 	private PersonService personservice;
 
-	@Autowired
-	public PersonController(PersonService personservice) {
-		this.personservice = personservice;
-	}
+	
 	
 	 @PostMapping
 	 @ResponseStatus(value = HttpStatus.CREATED)
