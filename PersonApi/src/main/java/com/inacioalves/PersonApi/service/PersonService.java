@@ -9,8 +9,10 @@ import org.springframework.stereotype.Service;
 import com.inacioalves.PersonApi.dto.MessageResponseDto;
 import com.inacioalves.PersonApi.dto.PersonDto;
 import com.inacioalves.PersonApi.entity.Person;
+import com.inacioalves.PersonApi.exeption.PersonNotFoundExeption;
 import com.inacioalves.PersonApi.mapper.PersonMaper;
 import com.inacioalves.PersonApi.repository.PersonRepository;
+
 
 @Service
 public class PersonService {
@@ -41,6 +43,12 @@ public class PersonService {
 				.map(personMapper::toDTO)
 				.collect(Collectors.toList());
 	}
+
+	public PersonDto findById(Long id) throws PersonNotFoundExeption {
+		Person person =personrepository.findById(id)
+				.orElseThrow(() -> new PersonNotFoundExeption(id));
+		
+		return personMapper.toDTO(person);}
 	
 	
 
